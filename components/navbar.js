@@ -56,11 +56,12 @@ function navbar () {
             <div style="width: 89%;">
                 <div style=" width: 97%; border: 1px solid red;">
                     <div style=" width: 100%; border: none; display: flex;">
-                        <input type="text" placeholder="Start shopping..."
+                        <input type="text" id="query" placeholder="Start shopping..."
                             style="text-align: center; color: rgb(147, 147, 147); height: 32px; width: 99%;">
-                        <input type="image" id="btnSearch"
-                            src="https://www.naturesbasket.co.in/Images/search-button.jpg"
-                            style="border-width: 0px; margin-top: 0px; height:36px ;  ">
+                            <button id="Tsearch"><img src="https://www.naturesbasket.co.in/Images/search-button.jpg" alt=""></button>
+                            
+
+                            
                     </div>
                     <!-- <div style="text-align: center;">
                         <h3 style="color: #b71761; font-weight: bold; margin-top: 10px;">Trending Searches</h3>
