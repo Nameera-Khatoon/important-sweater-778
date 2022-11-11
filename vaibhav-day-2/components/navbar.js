@@ -1,15 +1,11 @@
 
-function navbar(){
+// function navbar(){
 
-    return ` <div>
-    <input type="text" name="" id="query" placeholder="Search for items and brands">
-    <button id="Tsearch">Search</button>
-    
-  </div>`
+//     return ``
     
     
-}
+// }
 
-export default navbar;
+// export default navbar;
 
 

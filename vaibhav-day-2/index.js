@@ -1,11 +1,11 @@
-import navbar from "./vaibhav-day-2/components/navbar.js";
-let nav= document.getElementById("navbar")
-nav.innerHTML=navbar()
+// import navbar from "./components/navbar.js";
+// let nav= document.getElementById("navbar")
+// nav.innerHTML=navbar()
 
 
 const APIKIY = `sjYjaQYJg7twCbi4Lj3gr51ujbvUxshEKI3HsvYG5H4`
 
-let gallery = document.getElementById("Scontainer") 
+let gallery = document.getElementById("container") 
 
 
 const data = async () => {
@@ -27,21 +27,22 @@ const display = (data) => {
     data.forEach((el) => {
         console.log('el',el)
         let div = document.createElement("div");
-        div.setAttribute("id", "Tcard")
+        div.setAttribute("id", "card")
 
         const img = document.createElement('img');
         img.src = el.urls.small;
-        img.setAttribute("class", "Tproimg");
+        img.setAttribute("class", "image");
 
 
         const heading = document.createElement("h5");
         heading.innerText = el.alt_description;
-        heading.setAttribute("class", "Tproh");
+        heading.setAttribute("class", "heading");
 
         let Sdiv=document.createElement('div');
         Sdiv.setAttribute('class','SDiv')
 
-        const bun = document.createElement("p")
+        const bun = document.createElement("p");
+        bun.setAttribute ("id","prc")
         bun.innerText = "price 30$";
 
         
@@ -65,3 +66,14 @@ buttonSearch.addEventListener("click", function () {
 })
 
 
+// const options = {
+//     method: 'GET',
+//     headers: {
+//         'X-RapidAPI-Key': 'db310bd509msh04e59868d661d62p117c2ejsn315dce27b2f8',
+//         'X-RapidAPI-Host': 'edamam-food-and-grocery-database.p.rapidapi.com'
+//     }
+// };
+// fetch('https://edamam-food-and-grocery-database.p.rapidapi.com/parser?ingr=banana', options)
+//     .then(response => response.json())
+//     .then(response => console.log(response))
+//     .catch(err => console.error(err));

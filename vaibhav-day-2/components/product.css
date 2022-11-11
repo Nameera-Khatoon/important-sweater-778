@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#container{
+    height: auto;
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: auto;
+    border: 3px solid black;
+}
+#card{
+    height: 300px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 0px solid red;
+}
+#card>img{
+    height: 249px;
+    width: 249px;
+    margin: auto;
+}
+#prc,#card>h5{
+text-align: center;
+}
