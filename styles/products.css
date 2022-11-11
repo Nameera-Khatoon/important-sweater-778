@@ -1,0 +1,67 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+#container{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+#products{
+    width: 90%;
+    border: 2px solid red;
+
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: auto auto;
+    gap: 20px;
+    text-align: center;
+    align-items: center;
+    margin: auto;
+    margin-left: 232px;
+    padding: 8px;
+
+}
+#fixed-content {
+    min-height:100%;
+    position:fixed;
+    /* overflow-y:visible; */
+    /* overflow-x:scroll; */
+    width: 15%;
+    border: 2px solid blue;
+} 
+
+#products>div{
+   /* border: 2px solid red; */
+   width: 100%;
+   border: 2px solid green;
+}
+
+#products>div:hover{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+#products>div> .image{
+    height: 300px;
+    width: 300px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    /* margin: 20px; */
+}
+#products>div> .image>img{
+    height: 100%;
+    width: 100%;
+}
+
+#priceBtn{
+    padding: 5px;
+    border-radius: 8px;
+    background-color: white;
+    border: 1px solid grey;
+}
+#addBtn{
+    padding: 8px 24px;
+    background-color: #94bf46;
+    color: white;
+    border-radius: 8px;
+border: none;
+margin-bottom: 30px;
+}
