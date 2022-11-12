@@ -1,6 +1,6 @@
 import navbar from "../components/navbar.js";
 // import navbar from '../images/'
-let nav= document.getElementById("navbar")
+let nav= document.getElementById("navbar-1")
 nav.innerHTML=navbar()
 
 
