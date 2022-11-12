@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,6 +12,7 @@
     <link rel="stylesheet" href="./style/cart.css">
     <link rel="stylesheet" href="./style/navbar.css">
 </head>
+
 <body>
     <div id="navbar-1"></div>
 
@@ -26,8 +28,8 @@
                 <a href="#" id="refresh" class="refr">Refresh</a>
             </div>
             <div>
-                <button class="shopping" >CONTINUE SHOPPING</button>
-                <button class="checkout" >PROCEED TO CHECKOUT</button>
+                <button class="shopping">CONTINUE SHOPPING</button>
+                <button class="checkout">PROCEED TO CHECKOUT</button>
             </div>
         </div>
 
@@ -52,9 +54,9 @@
             <div style="width: 5%;">
                 <span>Remove</span>
             </div>
-        </div> 
+        </div>
 
-        <div class="cart3"></div> 
+        <div class="cart3"></div>
 
         <div id="label" class="text-center"></div>
 
@@ -100,15 +102,48 @@
             <div style="width: 15%;" class="total-price">
                 &#8377;0
             </div>
-            <div style="width: 5%;" >
+            <div style="width: 5%;">
                 <i class="fas fa-trash-alt cart-remove"></i>
             </div>
         </div>
 
-        
+
     </div>
 </body>
+
 </html>
 
 <script src="sample.js" type="module"></script>
 <script src="./components/cart.js"></script>
+
+
+
+
+
+
+
+<!-- <div class="cart-item">
+    <div class="img_desc">
+        <img width="20%" src="img/Fresh_Basket_Logo.jpg" alt="" />
+    </div>
+    <div class="cart-price">
+        <p>&#8377;{search.name}</p>
+    </div>
+    <div class="cart-price">
+        <p>&#8377;{search.Price}</p>
+    </div>
+    <div class="buttons">
+        <i onclick="decrement(${id})" class="fa-solid fa-dash"></i>
+        <div id=${id} class="quantity">&#8377;{item}</div>
+        <i onclick="increment(${id})" class="fa-solid fa-plus"></i>
+    </div>
+    <div>
+        <p>&#8377;0</p>
+    </div>
+    <div>
+        <p>&#8377;{item*search.Price}</p>
+    </div>
+    <div>
+        <i class="fas fa-trash-alt cart-remove"></i>
+    </div>
+</div> -->

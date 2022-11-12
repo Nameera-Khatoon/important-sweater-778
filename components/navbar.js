@@ -55,12 +55,13 @@ function navbar() {
                 <div>
                     <img src="https://img.icons8.com/ios-filled/41/85b93c/gear.png"/>
                 </div>
+                <a href="./cart.html">
                 <div>
-                    <a href="./cart.html">
                     <img src="https://img.icons8.com/sf-regular/40/85b93c/shopping-cart.png" />
                     <span id="item_Count" class="count">0</span>
-                    </a>
+                    
                 </div>
+                </a>
             </div>
         </div>
     </div>
