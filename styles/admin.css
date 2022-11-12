@@ -1,0 +1,32 @@
+
+      #navbar>div{
+        display: flex;
+        gap: 30px;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+
+      #input_data{
+        border: solid;
+        text-align: center;
+      }
+       
+       #mobile_form{
+        /* border: 1px solid; */
+        width: 50%;
+        margin: auto;
+        
+       }
+
+       #mobile_form>input{
+        display: block;
+       
+        margin: 10px auto;
+        
+       }
+
+       input[type=text]{
+        width: 400px;
+        
+        
+       }

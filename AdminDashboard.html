@@ -14,47 +14,49 @@
     </style>
 </head>
 <body>
-    <table>
-        <thead>
-            <tr>
-                <th>Image</th>
-                <th>Name</th>
-                <th>Price</th>
-            </tr>
-        </thead>
-        <tbody>
-            <!-- Append table rows here -->
-        
-        </tbody>
-    </table>
+    <div id="block-2">
+        <div id="sort_filter">
+          <button id="sort_lth">
+            Sort Price Low to High
+          </button>
+          <button id="sort_htl">
+            Sort Price High to Low
+          </button>
+        </div>
+  
+        <div id="Product_list">
+          
+        </div>
+      </div>
+     
 <!-- <img src="" alt=""> -->
 </body>
 </html>
 <script>
-    let Product_Details=JSON.parse(localStorage.getItem('Product_Details'))
-    let tbody=document.querySelector('body')
-    console.log(Product_Details)
-    display(Product_Details)
-    function display(data){
-        document.querySelector('tbody').innerHTML=null;
-        data.forEach(element => {
-            let tr=document.createElement('tr');
-            let td1=document.createElement('td');
-            let img=document.createElement('img')
-            img.src=element.img
-            // let img=document
-            td1.append(img)
-            let td2=document.createElement('td')
-            td2.innerText=element.name
-            let td3=document.createElement('td')
-            td3.innerText=element.price
-            let td4=document.createElement('td')
-            td4.innerText=element.quantity
-            tr.append(td1,td2,td3,td4)
-            tbody.append(tr)
+    // let Product_Details=JSON.parse(localStorage.getItem('Product_Details'))
+    // let tbody=document.querySelector('body')
+    // console.log(Product_Details)
+    // display(Product_Details)
+    // function display(data){
+    //     document.querySelector('tbody').innerHTML=null;
+    //     data.forEach(element => {
+    //         let tr=document.createElement('tr');
+    //         let td1=document.createElement('td');
+    //         let img=document.createElement('img')
+    //         img.src=element.img
+    //         // let img=document
+    //         td1.append(img)
+    //         let td2=document.createElement('td')
+    //         td2.innerText=element.name
+    //         let td3=document.createElement('td')
+    //         td3.innerText=element.price
+    //         let td4=document.createElement('td')
+    //         td4.innerText=element.quantity
+    //         tr.append(td1,td2,td3,td4)
+    //         tbody.append(tr)
      
         
-        });
-    }
+    //     });
+    // }
 
 </script>
