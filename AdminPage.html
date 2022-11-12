@@ -7,65 +7,7 @@
     <title>Document</title>
 
     <style>
-        #container{
-            border: 2px  solid;
-            width: 90%;
-            margin: auto;
-            height: 600px;
-        }
-        #container>div{
-           border: 1px solid red;
-           width: 50%;
-           height: 100%;
-           margin: auto;}
-           
-
-        #image{
-            border: 1px solid rebeccapurple;
-            padding: 20px;
-            display: flex;
-        }
-
-        #image button{
-            font-size: 20px;
-            padding: 10px;
-            width: 230px;
-            
-            
-        }
-        button{
-            display: block;
-            /* border: 1px solid rebeccapurple; */
-            margin: 10px;
-        }
-        #btn-url{
-         /* border: 4px solid; */
-         margin-left: auto;
-        }
-        input[type=text]{
-            display: block;
-            width: 100%;
-            height: 40px;
-            box-sizing: border-box;
-            /* margin: 10px; */
-        }
-        input[type=button]{
-            width: 30%;
-            height: 50px;
-            margin-left: 20px;
-            font-size: 18px;
-            border-radius: 10px;
-            border: none;
-            color: white;
-            background-color: blue;
-
-        }
-        #image>:nth-child(3){
-         /* text-align: center; */
-         display: grid;
-         border: 1px solid;
-         justify-content: center;
-        }
+       
         
     </style>
 </head>
@@ -73,7 +15,14 @@
     <nav></nav>
     <main>
         <div id="container">
-            <div>
+            <form action="">
+                <input type="Url" id="image" placeholder="Enter Image Url" required >
+                <input type="text" id="name" placeholder="Enter Product Name" required>
+                <input type="text" id="price" placeholder="Enter Product Price" required>
+                <input type="text" id="quantity" placeholder="Quantity for given Price" required>
+                <input type="submit" value="Submit">
+            </form>
+            <!-- <div>
                 
                  <div id="image">
                     <div>
@@ -100,10 +49,28 @@
                     </div>
                  
                 </div>
-            </div>
+            </div> -->
         </div>
 
     </main>
     <footer></footer>
 </body>
 </html>
+<script>
+    let form=document.querySelector('form')
+    form.addEventListener('submit',getData);
+    let Product_Details=JSON.parse(localStorage.getItem('Product_Details'))||[]
+    function getData(event){
+        event.preventDefault();
+        let obj={
+            img:form.image.value,
+            name:form.name.value,
+            price:form.price.value,
+            quantity:form.quantity.value
+        }
+        Product_Details.push(obj)
+        localStorage.setItem('Product_Details',JSON.stringify(Product_Details))
+        console.log('invoked')
+
+    }
+</script>
