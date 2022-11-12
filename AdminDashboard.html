@@ -1,62 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-    
-    tr
-    img{
-    width: 100px;
-    }
-    </style>
-</head>
-<body>
-    <div id="block-2">
-        <div id="sort_filter">
-          <button id="sort_lth">
-            Sort Price Low to High
-          </button>
-          <button id="sort_htl">
-            Sort Price High to Low
-          </button>
-        </div>
-  
-        <div id="Product_list">
-          
-        </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/admindashboard.css" />
+    <title>adminDashboard</title>
+   
+  </head>
+  <body>
+    <div id="navbar">
+      
       </div>
-     
-<!-- <img src="" alt=""> -->
-</body>
-</html>
-<script>
-    // let Product_Details=JSON.parse(localStorage.getItem('Product_Details'))
-    // let tbody=document.querySelector('body')
-    // console.log(Product_Details)
-    // display(Product_Details)
-    // function display(data){
-    //     document.querySelector('tbody').innerHTML=null;
-    //     data.forEach(element => {
-    //         let tr=document.createElement('tr');
-    //         let td1=document.createElement('td');
-    //         let img=document.createElement('img')
-    //         img.src=element.img
-    //         // let img=document
-    //         td1.append(img)
-    //         let td2=document.createElement('td')
-    //         td2.innerText=element.name
-    //         let td3=document.createElement('td')
-    //         td3.innerText=element.price
-    //         let td4=document.createElement('td')
-    //         td4.innerText=element.quantity
-    //         tr.append(td1,td2,td3,td4)
-    //         tbody.append(tr)
-     
-        
-    //     });
-    // }
+<!--  fil-->
+    </div>
+    <div id="block-2">
+      <div id="sort_filter">
+        <button id="sort_lth">
+          Sort Price Low to High
+        </button>
+        <button id="sort_htl">
+          Sort Price High to Low
+        </button>
+      </div>
 
-</script>
+      <div id="product_list">
+        
+      </div>
+    </div>
+    <script src="./scripts/adminDashboard.js"></script>
+  </body>
+</html>

@@ -1,18 +1,18 @@
-let form =document.getElementById('mobile_form')
-let mobile_data=JSON.parse(localStorage.getItem('mobile_data'))||[]
+let form =document.getElementById('product_form')
+let product_data=JSON.parse(localStorage.getItem('product_data'))||[]
 
        
 form.addEventListener('submit',function(event){
     event.preventDefault()
     let obj={
-        name:form.mobile_name.value,
-        brand:form.mobile_brand.value,
-        price:Number(form.mobile_price.value),
-        image:form.mobile_image.value,
+        name:form.product_name.value,
+        brand:form.product_brand.value,
+        price:Number(form.product_price.value),
+        image:form.product_image.value,
        }
        
-        mobile_data.push(obj)
-        localStorage.setItem('mobile_data',JSON.stringify(mobile_data))
+        product_data.push(obj)
+        localStorage.setItem('product_data',JSON.stringify(product_data))
         location.reload()
        console.log(obj)
 })
