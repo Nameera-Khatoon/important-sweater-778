@@ -53,11 +53,13 @@ function navbar() {
             </div>
             <div style="display: flex;">
                 <div>
-                    <img src="https://img.icons8.com/ios-filled/40/85b93c/christmas-star.png" />
+                    <img src="https://img.icons8.com/ios-filled/41/85b93c/gear.png"/>
                 </div>
                 <div>
+                    <a href="./cart.html">
                     <img src="https://img.icons8.com/sf-regular/40/85b93c/shopping-cart.png" />
-                    <span id="cartCount" class="count">0</span>
+                    <span id="item_Count" class="count">0</span>
+                    </a>
                 </div>
             </div>
         </div>
@@ -238,12 +240,12 @@ function navbar() {
             </div>
         </div>
     </div>
-    <div class="popup">
+    <div  class="popup">
         <div class="close-btn">&times;</div>
         <div class="form">
             <h2>Enter Your Delivery Pincode</h2>
             <div class="form-element">
-                <input type="text" id="pincode" placeholder="Delivery Pincode">
+                <input type="text" id="pincode" maxlength="6" placeholder="Delivery Pincode">
                 <button id="submit">SUBMIT</button>
             </div>
             <div class="p">
@@ -272,5 +274,6 @@ export default navbar;
                             <li>Keto-Paleo</li>
                         </ul>
                     </div> */}
+                    //  <img src="https://img.icons8.com/plumpy/40/85b93c/gear--v2.png"/>
 
                     

@@ -1,5 +1,6 @@
 import navbar from  "./components/navbar.js"
 
+// cart_count();
 let nav = document.getElementById("navbar-1");
 nav.innerHTML = navbar();
 
@@ -14,6 +15,8 @@ document.querySelector(".popup .close-btn").addEventListener("click", function (
     document.querySelector(".popup").classList.remove("active")
 })
 
+
+
 // function addToCart(el) {
 //     let data = JSON.parse(localStorage.getItem("items")) || [];
 
@@ -25,6 +28,6 @@ document.querySelector(".popup .close-btn").addEventListener("click", function (
 
 // function cart_count() {
 //     let data = JSON.parse(localStorage.getItem("items")) || [];
-//     let c = document.getElementById("cartCount");
+//     let c = document.getElementById("item_Count");
 //     c.innerText = data.length;
 // }
