@@ -1,3 +1,5 @@
+
+
 let div = document.getElementById('r_checkbox')
 let count = 0; 
 
@@ -27,6 +29,8 @@ div.onclick = function(){
 
         data.push(obj)
         localStorage.setItem("signup_data_consumer" , JSON.stringify(data))
+
+        window.location.href = "index.html"
     })
 
 // let pass = document.querySelector("#password").value
@@ -39,7 +43,7 @@ div.onclick = function(){
 //     }else{
 //         alert ("lol")
 //     }
-// }
+// }  
 
 
 

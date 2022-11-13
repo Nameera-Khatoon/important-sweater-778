@@ -11,6 +11,6 @@ btn.onclick = function(){
         email:login_email.value
     }
     localStorage.setItem("login_data" , JSON.stringify(obj))
-   window.location.href = 'landing.html'
+   window.location.href = 'index.html'
 }
 
