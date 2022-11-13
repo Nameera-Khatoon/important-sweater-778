@@ -2,7 +2,8 @@
 function navbar() {
     return `<div id="navbar">
     <div id="logo">
-        <img src="images/Fresh_Basket_Logo.jpg" alt="">
+        <a href="index.html">
+        <img src="images/Fresh_Basket_Logo.jpg" alt=""></a>
     </div>
     <div id="right">
         <div style="display: flex; width: 100%; justify-content: space-between;">
@@ -222,7 +223,8 @@ function navbar() {
         </div>
         <div style=" width: 85%; display: flex; justify-content: space-around;">
             <div>
-                <span>MY ORDERS</span>
+            <a href="myorder.html"><span>MY ORDERS</span></a>
+                
             </div>
             <div>
                 <SPAN>GIFTING</SPAN>
