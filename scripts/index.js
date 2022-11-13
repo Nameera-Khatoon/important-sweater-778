@@ -1,77 +1,97 @@
+// // import navbar from "../components/navbar.js";
+// // // import navbar from '../images/'
+// // let nav= document.getElementById("navbar-1")
+// // nav.innerHTML=navbar()
 
-let images= ['https://d1z88p83zuviay.cloudfront.net/BannerImages/30c36f71-c01f-41eb-bbbb-a56a1f438c39_1320x376.jpg',
-'https://d1z88p83zuviay.cloudfront.net/BannerImages/a5ad3541-5426-47e1-b33c-0360c5e28c35_1320x376.jpg',
-'https://d1z88p83zuviay.cloudfront.net/BannerImages/0f2301bb-4607-47f9-859c-1c2c21642159_1320x376.jpg',
-'https://d1z88p83zuviay.cloudfront.net/BannerImages/88b99410-b311-4c4d-a2bd-61859cdc494a_1320x376.jpg',
-'https://d1z88p83zuviay.cloudfront.net/BannerImages/bd139272-384b-4d66-8932-8bc8093f5b6d_1320x376.jpg',
-'https://d1z88p83zuviay.cloudfront.net/BannerImages/56d58540-9be6-436e-9046-3a75e7f3928b_1320x376.jpg',
-'https://d1z88p83zuviay.cloudfront.net/BannerImages/8f6ba871-ab4e-4f01-b71c-c913dfb63f11_1320x376.jpg',
-'https://i.ibb.co/RTzwD1t/MAIN-slider-3.png',
-'https://i.ibb.co/HKX3SHk/MAIN-slider-2.png',
-'https://i.ibb.co/ZKZ0bf3/MAIN-slider1.png'
-]
 
-let image= document.createElement("img");
-image.style.border="100%";
+// const APIKIY = `sjYjaQYJg7twCbi4Lj3gr51ujbvUxshEKI3HsvYG5H4`
 
-function counter(){
-image.src=images[0];  
-document.querySelector("#img").append(image);
+// let gallery = document.getElementById("Scontainer") 
 
-  let i=1; 
-  let interval=setInterval(function(){
-      if(i==images.length){
-          i=0;
-      }
-      image.src=images[i];   
-   document.querySelector("#img").append(image);
 
-    i++;
-  },3000);
-}
-counter(); 
+// const data = async () => {
+//     try {
+//         let searchParam = document.getElementById("query").value;
+//         let res = await fetch(`https://api.unsplash.com/search/photos?client_id=${APIKIY}&query=${searchParam}&per_page=20`)
+//         let data = await res.json()
+      
+//         let final_data = data.results
+//          console.log(final_data);
+//        display(final_data)
+//     } catch (error) {
+//         console.log(error);
+//     }
+// }
 
-var swiper = new Swiper(".slide-content", {
-  slidesPerView: 4,
-  spaceBetween: 30,
-  slidesPerGroup: 4,
-  loop: true,
-  loopFillGroupWithBlank: true,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-});
+// const display = (data) => {
+//     gallery.innerHTML = null;
+//     data.forEach((el) => {
+//         console.log('el',el)
+//         let div = document.createElement("div");
+//         div.setAttribute("id", "Tcard")
 
-// imageArr= [
-//     'https://www.naturesbasket.co.in/Images/homepageblogbanner/NB_pastaBlog_banner.jpg',
-//     'https://www.naturesbasket.co.in/Images/homepageblogbanner/NB_1320x355-blog2.jpg',
-//     'https://www.naturesbasket.co.in/Images/homepageblogbanner/NB_paneerBlog_banner.jpg'
-// ]
+//         const img = document.createElement('img');
+//         img.src = el.urls.small;
+//         img.setAttribute("class", "Tproimg");
 
-// let image2= document.createElement("img");
-// image2.style.width="100%";
 
-//         function counter2(){
-//             image2.src=imageArr[0];  
-//             document.querySelector("#img2").append(image2);
-          
-//                 let j=1; 
-//                 let interval2=setInterval(function(){
-//                     if(j==imageArr.length){
-//                         j=0;
-//                     }
-//                     image.src=imageArr[j];   
-//                  document.querySelector("#img2").append(image2);
-          
-//                   j++;
-//                 },3000);
-//             }
+//         const heading = document.createElement("h5");
+//         heading.innerText = el.alt_description;
+//         heading.setAttribute("class", "Tproh");
 
-//             counter2();
+// // <<<<<<< HEAD
+// // //             counter2();
 
-//Day-3
+// // //Day-3
+// // =======
+//         let Sdiv=document.createElement('div');
+//         Sdiv.setAttribute('class','SDiv')
+
+//         const bun = document.createElement("p")
+//         bun.innerText = "price 30$";
+
+        
+//         Tsearch.addEventListener('click',()=>{
+
+//             SaveItems(el)
+
+//         })
+        
+
+
+//         Sdiv.append(bun)
+//         div.append(img, heading, Sdiv)
+//         gallery.append(div)
+//     });
+// }
+
+// let buttonSearch = document.getElementById("Tsearch");
+// buttonSearch.addEventListener("click", function () {
+//     data()
+// })
+// // >>>>>>> 2a819e1b7724b95e736d93074c514f500a72a891
+// let searching=document.getElementById('Tsearch')
+// // let query = document.getElementById("query").value;
+// searching.addEventListener('click',function(){
+//     console.log('invoked')
+// })
+
+// console.log(Tsearch)
+// searching.addEventListener('click',function(){
+// let query = document.getElementById("query").value;
+//     console.log(query)
+//     localStorage.setItem('queri',query);
+//     let url='products.html'
+//     window.location.href=url
+// })
+
+let s= document.getElementById('Tsearch');
+// console.log(s)
+s.addEventListener('click',function(){
+    let query = document.getElementById("query").value;
+        console.log(query)
+        localStorage.setItem('queri',query);
+        let url='products.html'
+        window.location.href=url
+    })
+

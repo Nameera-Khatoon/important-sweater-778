@@ -1,8 +1,68 @@
 const APIKIY = `sjYjaQYJg7twCbi4Lj3gr51ujbvUxshEKI3HsvYG5H4`
 let gallery = document.getElementById("products")
-const data = async () => {
+let search=document.getElementById('Tsearch')
+let fruits=document.getElementById('fruits');
+let exFruits=document.getElementById('exFruits');
+let vegies=document.getElementById('vegies');
+let exVegies=document.getElementById('exVegies');
+let apple=document.getElementById('apple');
+let orange=document.getElementById('orange');
+let potato=document.getElementById('potato');
+fruits.addEventListener("click",queryIsFruit);
+exFruits.addEventListener("click",queryIsExFruits);
+vegies.addEventListener("click",queryIsvegies);
+exVegies.addEventListener("click",queryIsExVegies);
+apple.addEventListener("click",queryIsApple); 
+orange.addEventListener("click",queryIsOrange);
+potato.addEventListener("click",queryIsPotato);
+search.addEventListener("click",searchQuery);
+let searchParam;
+function localsearch(){
+    searchParam=localStorage.getItem('queri')
+    data()
+    // console.log(searchParam)
+}
+localsearch()
+function queryIsFruit(){
+    searchParam = "fruits";
+    data();
+}
+function queryIsExFruits(){
+    searchParam = "Exotic fruits";
+    data();
+}
+
+function searchQuery(){
+searchParam = document.getElementById("query").value;
+ data();
+}
+
+function queryIsvegies(){
+    searchParam = "Vegetables";
+    data();
+}
+function queryIsExVegies(){
+    searchParam = "Exotic Vegetables";
+    data();
+}
+function queryIsApple(){
+    searchParam = "apple";
+    data();
+}
+function queryIsOrange(){
+    searchParam = "orange";
+    data();
+}
+function queryIsPotato(){
+    
+    searchParam = "potato";
+    data();
+}
+
+async function data () {
+ searchParam;
+
     try {
-        let searchParam = document.getElementById("query").value;
         let res = await fetch(`https://api.unsplash.com/search/photos?client_id=${APIKIY}&query=${searchParam}&per_page=20`)
         let data = await res.json()
         let final_data = data.results
@@ -41,7 +101,7 @@ const display = (data) => {
         priceBtn.append(sTag);
 
         const priceBtn2 = document.createElement("button");
-        priceBtn2.setAttribute ("id","priceBtn")
+        priceBtn2.setAttribute ("id","priceBtn2")
         priceBtn2.innerText = "₹30";
 
         const bun = document.createElement("button");
@@ -55,11 +115,12 @@ const display = (data) => {
         gallery.append(div)
     });
 }
-let buttonSearch = document.getElementById("Tsearch");
-buttonSearch.addEventListener("click", function () {
-    data  ()
-})
+// let buttonSearch = document.getElementById("Tsearch");
+// buttonSearch.addEventListener("click", function () {
 
-// Tsearch.addEventListener('click',()=>{
-//     SaveItems(el)
+//     searchQuery();
 // })
+
+// // Tsearch.addEventListener('click',()=>{
+// //     SaveItems(el)
+// // })
