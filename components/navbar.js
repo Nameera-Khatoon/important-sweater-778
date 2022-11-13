@@ -1,7 +1,8 @@
+
 function navbar() {
     return `<div id="navbar">
     <div id="logo">
-        <img src="./images/fresh-basket.jpeg" alt="">
+        <img src="images/Fresh_Basket_Logo.jpg" alt="">
     </div>
     <div id="right">
         <div style="display: flex; width: 100%; justify-content: space-between;">
@@ -43,8 +44,10 @@ function navbar() {
                     <div style=" width: 100%; display: flex; " id="searchBar" >
                         <input type="text" placeholder="Start shopping..."
                             style="text-align: center; color: black; font-size: 17px; height: 32px; width: 99%;">
-
-                        <input type="image" id="btnSearch"
+                            
+                            <button id="Tsearch"><img src="https://www.naturesbasket.co.in/Images/search-button.jpg" alt="" ></button>
+                       
+                            <input type="image" id="btnSearch"
                             src="https://www.naturesbasket.co.in/Images/search-button.jpg"
                             style="border-width: 0px; margin-top: 0px; height:36px ;  ">
                     </div>
@@ -53,12 +56,15 @@ function navbar() {
             </div>
             <div style="display: flex;">
                 <div>
-                    <img src="https://img.icons8.com/ios-filled/40/85b93c/christmas-star.png" />
+                    <img src="https://img.icons8.com/ios-filled/41/85b93c/gear.png"/>
                 </div>
+                <a href="./cart.html">
                 <div>
                     <img src="https://img.icons8.com/sf-regular/40/85b93c/shopping-cart.png" />
-                    <span id="cartCount" class="count">0</span>
+                    <span id="item_Count" class="count">0</span>
+                    
                 </div>
+                </a>
             </div>
         </div>
     </div>
@@ -238,12 +244,12 @@ function navbar() {
             </div>
         </div>
     </div>
-    <div class="popup">
+    <div  class="popup">
         <div class="close-btn">&times;</div>
         <div class="form">
             <h2>Enter Your Delivery Pincode</h2>
             <div class="form-element">
-                <input type="text" id="pincode" placeholder="Delivery Pincode">
+                <input type="text" id="pincode" maxlength="6" placeholder="Delivery Pincode">
                 <button id="submit">SUBMIT</button>
             </div>
             <div class="p">
@@ -272,5 +278,6 @@ export default navbar;
                             <li>Keto-Paleo</li>
                         </ul>
                     </div> */}
+                    //  <img src="https://img.icons8.com/plumpy/40/85b93c/gear--v2.png"/>
 
                     
