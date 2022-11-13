@@ -284,3 +284,13 @@ p{
     /* outline: none; */
     padding: 3px 10px;
 }
+#query{
+ width:90%; height:36px;
+ /* border:1px solid red; */
+ height: auto;
+}
+#ts{
+    /* border: 1px solid black; */
+    display: flex;
+    margin: auto;
+}

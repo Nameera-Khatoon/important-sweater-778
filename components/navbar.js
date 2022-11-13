@@ -43,10 +43,11 @@ function navbar() {
                     <div style=" width: 100%; display: flex; " id="searchBar" >
                         <input type="text" placeholder="Start shopping..."
                             style="text-align: center; color: black; font-size: 17px; height: 32px; width: 99%;">
-
+                        
+                        <button>
                         <input type="image" id="btnSearch"
                             src="https://www.naturesbasket.co.in/Images/search-button.jpg"
-                            style="border-width: 0px; margin-top: 0px; height:36px ;  ">
+                            style="border-width: 0px; margin-top: 0px; width:100%; height:36px ;  "></button>
                     </div>
                     
                 </div>
