@@ -1,16 +1,52 @@
 totalPrice();
+let items = JSON.parse(localStorage.getItem("items"))||[];
 function totalPrice() {
-    let toatl = 0;
-    let items = JSON.parse(localStorage.getItem("items"));
+    // let total= 0;
 
-    for (let i = 0; i < items.length; i++) {
-        // let quantity = 
-        total += Number(items[i].price);
-    }
+   
+    // console.log(disc)
+    let quant=document.querySelectorAll('.number')
+    // console.log(quant)
+    quant.forEach(el => {
+        el.addEventListener('input',function(){
+        //    let x= Number(debounce(el.value))
+        
+        // console.log(x)
+        //    let total=x*disc
+        //    console.log(total)
+        })
 
-    let h2 = document.getElementsByClassName("total-price");
-    h2.innerText = total;
+    })
+
+  
 }
+
+function func(el){
+    let x= Number(el) 
+    let disc=100;
+    total=x*disc
+    // console.log(total)  
+    return total
+}
+
+let id;
+function debounce(func){
+    let total=0
+if(id){
+    clearTimeout(id)
+}
+id=setTimeout(function(){
+    // console.log(el)
+    func(el)
+    // let pricediv =document.getElementsByClassName('total-price')
+    // pricediv.innerHTML=total
+    // window.location.reload()
+    // el.value=null
+},1000)}
+
+
+
+  
 
 
 let label = document.getElementById("label");
@@ -19,14 +55,22 @@ let cartContainer = document.getElementById("cart-container");
 let basket = JSON.parse(localStorage.getItem("data")) || [];
 
 let calculaton = () => {
-    let cartIcon = document.getElementById("cartAmount");
-    cartIcon.innerHTML = basket.map((X) => X.item).reduce((x, y) => x + y, 0);
+
+    // let cartIcon = document.getElementsByClassName("cartAmount");
+    console.log(cartIcon)
+    // cartIcon.innerHTML = basket.map((X) => X.item).reduce((x, y) => x + y, 0);
 };
 
-calculaton();
+
+
+
+// calculaton();
 
 let generateCartItems = () => {
     if (basket.length !== 0) {
+
+
+
         return (cartContainer.innerHTML = basket.map((x) => {
             let { id, item } = x;
             let search = obj.find((y) => y.id === id) || [];
@@ -36,21 +80,21 @@ let generateCartItems = () => {
                     <img width="20%" src="img/Fresh_Basket_Logo.jpg" alt="" />
                 </div>
                 <div class="cart-price">
-                    <p>&#8377;{search.name}</p>
+                    <p>&#8377;${search.name}</p>
                 </div>
                 <div class="cart-price">
-                    <p>&#8377;{search.Price}</p>
+                    <p>&#8377;${search.price}</p>
                 </div>
                 <div class="buttons">
                     <i onclick="decrement(${id})" class="fa-solid fa-dash"></i>
-                    <div id=${id} class="quantity">&#8377;{item}</div>
+                    <div id=${id} class="quantity">&#8377;${item}</div>
                     <i onclick="increment(${id})" class="fa-solid fa-plus"></i>
                 </div>
-                <div>
-                    <p>&#8377;0</p>
+                <div  >
+                    <p>&#8377;</p>
                 </div>
                 <div>
-                    <p>&#8377;{item*search.Price}</p>
+                    <p>&#8377;${item*search.Price}</p>
                 </div>
                 <div>
                     <i onclick="removeItem(${id})" class="fas fa-trash-alt cart-remove"></i>
@@ -59,6 +103,8 @@ let generateCartItems = () => {
             `;
         })
             .join(""));
+
+
     }
     else {
         cartContainer.innerHTML = ``;
@@ -68,7 +114,7 @@ let generateCartItems = () => {
     }
 }
 
-generateCartItems();
+// generateCartItems();
 
 let increment = (id) => {
     let selectedItem = id;

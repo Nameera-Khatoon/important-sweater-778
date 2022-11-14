@@ -66,7 +66,7 @@ async function data () {
         let res = await fetch(`https://api.unsplash.com/search/photos?client_id=${APIKIY}&query=${searchParam}&per_page=20`)
         let data = await res.json()
         let final_data = data.results
-         console.log(final_data);
+        //  console.log(final_data);
        display(final_data)
     } catch (error) {
         console.log(error);
@@ -76,8 +76,10 @@ async function data () {
 const display = (data) => {
     gallery.innerHTML = null;
     data.forEach((el) => {
-        console.log('el',el);
+        // console.log('el',el);
+        if(el.alt_description!=null && el.urls.small!==null){
 
+        
         let div = document.createElement("div");
        
         let imgDiv= document.createElement("div");
@@ -97,22 +99,37 @@ const display = (data) => {
         priceBtn.setAttribute ("id","priceBtn")
         
         let sTag= document.createElement("s");
-        sTag.innerText = "MRP ₹30" ;
+        sTag.innerText = "MRP ₹130" ;
         priceBtn.append(sTag);
 
         const priceBtn2 = document.createElement("button");
         priceBtn2.setAttribute ("id","priceBtn2")
-        priceBtn2.innerText = "₹30";
-
+        priceBtn2.innerText = "₹100";
+        let addtoCart=JSON.parse(localStorage.getItem('addtoCart'))||[]
         const bun = document.createElement("button");
         bun.setAttribute ("id","addBtn")
         bun.innerText="ADD"
+        bun.addEventListener('click',function(){
+            // console.log("invoked function")
+            // console.log(el.alt_description);
+            let obj={
+                img:el.urls.small,
+                name:el.alt_description,
+                price:'100',
+                disc:'130',
+
+            }
+            addtoCart.push(obj)
+            localStorage.setItem('items',JSON.stringify(addtoCart))
+            
+        })
 
         textDiv.append(heading,priceBtn,priceBtn2,bun);
         
        
         div.append(imgDiv, textDiv);
         gallery.append(div)
+    }
     });
 }
 // let buttonSearch = document.getElementById("Tsearch");

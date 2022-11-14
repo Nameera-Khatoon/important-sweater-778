@@ -8,11 +8,29 @@
     <title>Payment Page</title>
     <link rel="stylesheet" href="./">
     <link rel="stylesheet" href="./styles/payment.css">
-   
+    <link rel="stylesheet" href="./styles/navbar.css">
+    <link rel="stylesheet" href="./styles/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <style>
+            #Tsearch, #pinBtn{
+                width: auto;
+            }
+
+            footer{
+                width: 98%;
+                margin: auto;
+            }
+
+            
+        </style>
 </head>
 <body>
-   
-    <div id="container">
+    <nav id="navbar-1"></nav>
+    <main>
+    <div id="container" style="margin-top: 20px; text-align:center">
         <h1>Payment <a>Details</a> </h1>
     </div>
 
@@ -34,12 +52,18 @@
         <input type="date"  id="Date" >
         <h5>CVV</h5>
         <input type="number" placeholder="CVV" id="cvv">
-        <div id="otp">
+        <div id="otp" >
             <input id="otp1" type="number" placeholder="Enter OTP">
     
             <button onclick="getOTP()">Get OTP</button>
         </div>
         <a id="pay">PAY</a>
+
+    </main>
+    <footer></footer>
+        
 </body>
 </html>
+<script src="./scripts/sample.js" type="module"></script>
 <script src="./scripts/payment.js"></script>
+<script src="./scripts/footer.js" type="module"></script>
