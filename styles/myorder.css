@@ -214,3 +214,10 @@ margin-bottom: 30px;
     margin-top: 0px;
     /* border:  2px solid pink; */
 }
+
+h2{
+    margin-bottom: 5px;
+}
+p{
+    line-height: 20px;
+}

@@ -26,11 +26,34 @@ div.onclick = function(){
             Password:password.value,
             Country:country.value,
         }   
-
-        data.push(obj)
+        let pswd=obj.Password
+        let num=0;
+        let sm=0;
+        let cap=0;
+        let spec=0;
+        for(let i=0;i<pswd.length;i++){
+            if(pswd[i]=="0" ||pswd[i]=="1" ||pswd[i]=="2" ||pswd[i]=="3" ||pswd[i]=="5" ||pswd[i]=="6" ||pswd[i]=="7" ||pswd[i]=="8" ||pswd[i]=="9" ){
+                num++;
+            }else if(pswd[i]>='a' && pswd[i]<='z'){
+                sm++;
+            }else if(pswd[i]>='A' && pswd[i]<='Z'){
+                cap++;
+            }else{
+                spec++
+            }
+        }
+        if(sm!=0 && num!=0 && cap!=0 && spec !=0){
+            data.push(obj)
         localStorage.setItem("signup_data_consumer" , JSON.stringify(data))
 
         window.location.href = "index.html"
+        }else if(obj.Firstname="" ||obj.Lastname==""||obj.Email==""||obj.Password==""||obj.Country==""){
+            alert("Please enter all the fields")
+        }else{
+            alert("Password must contain Numbers, special, small, capital characters")
+            
+        }
+        
     })
 
 // let pass = document.querySelector("#password").value

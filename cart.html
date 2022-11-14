@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <div id="navbar-1"></div>
+    <nav id="navbar-1"></nav>
 
     <div id="cartimg">
         <img src="https://i.ibb.co/fvJgTjY/MAIN-Banner.png" alt="">
@@ -24,12 +24,12 @@
         <div class="cart1">
             <div>
                 <span>MY CART( 2 ITEMS)</span>
-                <P>|</P>
+                <p>|</p>
                 <a href="#" id="refresh" class="refr">Refresh</a>
             </div>
             <div>
-                <button class="shopping">CONTINUE SHOPPING</button>
-                <button class="checkout">PROCEED TO CHECKOUT</button>
+               <a href="./products.html"> <button class="shopping">CONTINUE SHOPPING</button></a>
+               <a href="./payment.html" id="checkout"> <button class="checkout">PROCEED TO CHECKOUT</button></a>
             </div>
         </div>
 
@@ -59,56 +59,59 @@
         <div class="cart3"></div>
 
         <div id="label" class="text-center"></div>
+        <section id="cart-contaner-1">
+            <div id="cart-container" class="cart-container">
+                <!-- <table width="100%">
+                    <thead>
+                        <tr>
+                            <td>Image</td>
+                            <td>Product Description</td>
+                            <td>Price</td>
+                            <td>Discount</td>
+                            <td>Qty</td>
+                            <td>Sub-Total</td>
+                            <td>Remove</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="detail">
+                            <td ><img src="./img/fresh basket (1)-01.jpeg" alt="" class="cartimg"></td>
+                            <td class="description">Product_Description</td>
+                            <td><span>&#8377;485.00</span></td>
+                            <td><span>&#8377;0.00</span></td>
+                            <td>Qty</td>
+                            <td><span>&#8377;485.00</span></td>
+                            <td><a href="#"><i class="fas fa-trash-alt"></i></a></td>
+                        </tr>
+                    </tbody>
+                </table>  -->
 
-        <div id="cart-container" class="cart-container">
-            <!-- <table width="100%">
-                <thead>
-                    <tr>
-                        <td>Image</td>
-                        <td>Product Description</td>
-                        <td>Price</td>
-                        <td>Discount</td>
-                        <td>Qty</td>
-                        <td>Sub-Total</td>
-                        <td>Remove</td>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="detail">
-                        <td ><img src="./img/fresh basket (1)-01.jpeg" alt="" class="cartimg"></td>
-                        <td class="description">Product_Description</td>
-                        <td><span>&#8377;485.00</span></td>
-                        <td><span>&#8377;0.00</span></td>
-                        <td>Qty</td>
-                        <td><span>&#8377;485.00</span></td>
-                        <td><a href="#"><i class="fas fa-trash-alt"></i></a></td>
-                    </tr>
-                </tbody>
-            </table>  -->
-
-            <div style="width: 45%;" class="img_desc">
-                <img src="./img/Fresh_Basket_Logo.jpg" alt="" class="cart-img">
-                <span>Product_Description</span>
+                <div style="width: 45%;" class="img_desc">
+                    <!-- <img src="./img/Fresh_Basket_Logo.jpg" alt="" class="cart-img"> -->
+                    <span>Product_Description</span>
+                </div>
+                <div style="width: 10%;" class="cart-price">
+                    &#8377;130
+                </div>
+                <div style="width: 10%;" class="discount" id="disc">
+                    &#8377;100
+                </div>
+                <div style="width: 15%;" >
+                    <input type="number" value="1" class="cart-quantity number" >
+                </div>
+                <div style="width: 15%;" class="total-price" >
+                    &#8377;0
+                </div>
+                <div style="width: 5%;">
+                    <i class="fas fa-trash-alt cart-remove"></i>
+                </div>
             </div>
-            <div style="width: 10%;" class="cart-price">
-                &#8377;485
-            </div>
-            <div style="width: 10%;" class="discount">
-                &#8377;0.00
-            </div>
-            <div style="width: 15%;">
-                <input type="number" value="1" class="cart-quantity">
-            </div>
-            <div style="width: 15%;" class="total-price">
-                &#8377;0
-            </div>
-            <div style="width: 5%;">
-                <i class="fas fa-trash-alt cart-remove"></i>
-            </div>
-        </div>
+        </section>
+        
 
 
     </div>
+    
 </body>
 
 

@@ -50,9 +50,11 @@
 }
 #otp {
   display: flex;
+
 }
 #otp input {
-  width: 40%;
+  width: 50%;
+
 }
 #otp button {
   margin-top: 10px;

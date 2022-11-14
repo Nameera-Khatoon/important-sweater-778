@@ -35,7 +35,7 @@ function navbar() {
                 </div>
                 <div>
                     <span>|</span>
-                    <span><a href="" class="register">Register</a></span>
+                    <span><a href="join_as.html" class="register">Register</a></span>
                 </div>
             </div>
         </div>
