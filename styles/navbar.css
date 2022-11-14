@@ -1,11 +1,13 @@
 /* *{
     box-sizing: border-box;
 } */
-
+body{
+    position:relative
+}
 
 #navbar{
     /* border: 1px solid black; */
-    width: 89%;
+    width: 85%;
     margin: auto;
     height: auto;
     display: flex;
@@ -39,9 +41,11 @@
 .count{
     background-color: rgb(66, 151, 241);
     color: white ;
-    border-radius: 40%;
+    border-radius: 25%;
+    font-size: 16px;
     padding: 3px;
     margin-left: -20px;
+    text-decoration: none;
 }
 
 #right{
@@ -60,6 +64,7 @@
 .dropdown_menu{
     display: none;
     /* border: 1px solid blue; */
+    background-color: #fff;
 }
 
 .dropdown_menu ul{
@@ -82,7 +87,10 @@
 }
 
 #shop:hover .dropdown_menu ul{
+    width: 200px;
     display: block;
+    text-align: right;
+    margin-left: 30px;
     /* border: 1px solid blue; */
     /* margin: 5px; */
 }
@@ -102,6 +110,8 @@
     display: none;
     /* border: 1px solid red; */
     margin-left: -12px;
+    background-color: #fff;
+
 }
 
 .dropdown_menu ul li:hover .dropdown_menu-1{
@@ -140,10 +150,13 @@ p{
 
 .dropdown_menu-2, .dropdown_menu-3,.dropdown_menu-4, .dropdown_menu-5, .dropdown_menu-6, .dropdown_menu-7{
     display: none;
+    /* border: 1px solid red; */
+    background-color: #fff;
 }
 
 .dropdown_menu-8, .dropdown_menu-9, .dropdown_menu-10, .dropdown_menu-11{
     display: none;
+    background-color: #fff;
 }
 
 .dropdown_menu ul li:hover .dropdown_menu-2, .dropdown_menu ul li:hover .dropdown_menu-4, .dropdown_menu ul li:hover .dropdown_menu-5{
@@ -275,4 +288,14 @@ p{
     border: black;
     /* outline: none; */
     padding: 3px 10px;
+}
+#query{
+ width:90%; height:36px;
+ /* border:1px solid red; */
+ height: auto;
+}
+#ts{
+    /* border: 1px solid black; */
+    display: flex;
+    margin: auto;
 }
