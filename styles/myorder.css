@@ -136,6 +136,11 @@ border: none;
 margin-bottom: 30px;
 }
 
+#addBtn:hover{
+    background-color: #6aa300;
+    cursor: pointer;
+}
+
 #eventText{
     display: flex;
     flex-direction: row;

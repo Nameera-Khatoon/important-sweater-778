@@ -40,20 +40,12 @@ function navbar() {
             </div>
         </div>
         <div style="display: flex;">
-            <div style="width: 89%;">
-                <div style=" width: 97%;">
-                    <div style=" width: 100%; display: flex; " id="searchBar" >
-                        <input type="text" placeholder="Start shopping..."
-                            style="text-align: center; color: black; font-size: 17px; height: 32px; width: 99%;">
-                            
-                            <button id="Tsearch"><img src="https://www.naturesbasket.co.in/Images/search-button.jpg" alt="" ></button>
-                       
-                            <input type="image" id="btnSearch"
-                            src="https://www.naturesbasket.co.in/Images/search-button.jpg"
-                            style="border-width: 0px; margin-top: 0px; height:36px ;  ">
-                    </div>
+            <div style="width: 89%;" id="search-div" >
+            <div id="ts">
+            <input type="text" id="query">
+            <button id="Tsearch"><img src="https://www.naturesbasket.co.in/Images/search-button.jpg" alt="" srcset=""></button>
+              </div>
                     
-                </div>
             </div>
             <div style="display: flex;">
                 <div>
