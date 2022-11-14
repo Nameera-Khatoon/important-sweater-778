@@ -31,7 +31,7 @@ function navbar() {
             </div>
             <div style="display: flex;" class="log">
                 <div>
-                    <span><a href="" class="login">Login</a></span>
+                    <span><a href="login.html" class="login">Login</a></span>
                 </div>
                 <div>
                     <span>|</span>
